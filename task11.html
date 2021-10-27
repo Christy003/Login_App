@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        div.form {
+            width: 700px;
+            height: 950px;
+            margin-top: 250px;
+            margin-bottom: 250px;
+            margin-right: 550px;
+            margin-left: 550px;
+            border: 2px black;
+        }
+
+        div.login {
+            color: black;
+            background-color: aliceblue;
+        }
+
+        body {
+            background-color: blue;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <form action="message.html" onSubmit="return validateForm()" method="post">
+            <div class="login">
+                <fieldset>
+                    <h1>Login Form</h1>
+
+                    <div>
+
+                        <input type="text" id="Uname" placeholder="EmailId" autofocus >
+
+                    </div><br>
+                    <div>
+
+                        <input type="password" id="pword" placeholder="Password" >
+                    </div><br>
+                    <input type="submit" value="Log In">
+                </fieldset>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    function validateForm() {
+        var username = document.getElementById("Uname");
+        var Password = document.getElementById("pword");
+        if (username.value == "" || Password.value == "") {
+            alert("EmailId or password is missing !!");
+            return false;
+        }
+        else{
+            true;
+        }
+        
+    }
+</script>
+
+</html>
